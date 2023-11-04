@@ -12,14 +12,18 @@ namespace ProjCalculadora
         /// Historico das operações
         /// </summary>
         private List<string> _historico;
+        /// <summary>
+        /// data da criação da calculadora
+        /// </summary>
+        private string _data;
         
         /// <summary>
         /// Construtror
         /// </summary>
-        public Calculadora()
+        public Calculadora(String data)
         {
             _historico = new List<string>();
-
+            this._data = data;
         }
         
         //public
@@ -33,7 +37,7 @@ namespace ProjCalculadora
         public int Somar(int num1,int num2)
         {
             int res = num1 + num2;
-            _historico.Insert(0, "Res: " + res);
+            _historico.Insert(0, "Res: " + res + this._data);
             return res;
         }
         /// <summary>
@@ -45,7 +49,7 @@ namespace ProjCalculadora
         public int Subtrair(int num1, int num2)
         {
             int res = num1 - num2;
-            _historico.Insert(0, "Res: " + res);
+            _historico.Insert(0, "Res: " + res + this._data);
             return res;
         }
         /// <summary>
@@ -57,7 +61,7 @@ namespace ProjCalculadora
         public int Multiplicar(int num1, int num2)
         {
             int res = num1 * num2;
-            _historico.Insert(0, "Res: " + res);
+            _historico.Insert(0, "Res: " + res +this._data);
             return res;
         }
         /// <summary>
@@ -69,7 +73,7 @@ namespace ProjCalculadora
         public int Dividir(int num1, int num2)
         {
             int res = num1/ num2;
-            _historico.Insert(0, "Res: " + res);
+            _historico.Insert(0, "Res: " + res + this._data);
             return res;
         }
         /// <summary>
@@ -85,6 +89,7 @@ namespace ProjCalculadora
         }
         #endregion
 
+        
 
     }
 }
