@@ -8,6 +8,19 @@ namespace ProjCalculadora
 {
     public class Calculadora
     {
+        /// <summary>
+        /// Historico das operações
+        /// </summary>
+        private List<string> _historico;
+        
+        /// <summary>
+        /// Construtror
+        /// </summary>
+        public Calculadora()
+        {
+            _historico = new List<string>();
+
+        }
         
         //public
         #region public
@@ -19,8 +32,9 @@ namespace ProjCalculadora
         /// <returns>valor da soma</returns>
         public int Somar(int num1,int num2)
         {
-
-            return 0;
+            int res = num1 + num2;
+            _historico.Insert(0, "Res: " + res);
+            return res;
         }
         /// <summary>
         /// Metodo para subtração
@@ -30,8 +44,9 @@ namespace ProjCalculadora
         /// <returns>valor da subtração</returns>
         public int Subtrair(int num1, int num2)
         {
-
-            return 0;
+            int res = num1 - num2;
+            _historico.Insert(0, "Res: " + res);
+            return res;
         }
         /// <summary>
         /// Metodo para multiplicar
@@ -41,8 +56,9 @@ namespace ProjCalculadora
         /// <returns>valor da multiplicação</returns>
         public int Multiplicar(int num1, int num2)
         {
-
-            return 0;
+            int res = num1 * num2;
+            _historico.Insert(0, "Res: " + res);
+            return res;
         }
         /// <summary>
         /// Metodo para dividir
@@ -52,8 +68,9 @@ namespace ProjCalculadora
         /// <returns>valor da divição</returns>
         public int Dividir(int num1, int num2)
         {
-
-            return 0;
+            int res = num1/ num2;
+            _historico.Insert(0, "Res: " + res);
+            return res;
         }
         /// <summary>
         /// Retorna o historico
@@ -61,8 +78,10 @@ namespace ProjCalculadora
         /// <returns></returns>
         public List<string> Historico()
         {
+            //limpa a lista, deixando somente 3 operações
+            _historico.RemoveRange(3, _historico.Count-3);
             
-            return new List<string>();
+            return _historico;
         }
         #endregion
 

@@ -93,6 +93,7 @@ namespace TestProjCalculadora
             calc.Somar(1, 2);
             calc.Somar(1, 2);
             calc.Somar(1, 2);
+            calc.Somar(1, 2);
 
             var lista = calc.Historico();
 
