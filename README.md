@@ -23,16 +23,16 @@ Este projeto é dividido em três partes principais:
 
 ## Como Usar
 
-Para usar este projeto e executar os testes, siga as etapas abaixo:
+Para executar os teste deste projeto, siga as etapas abaixo:
 
 1. Clone o repositório:
 
    ```bash
    git clone https://github.com/seu-usuario/calculadora-tdd-netcore.git
 
-2. Acesse o diretório do projeto:
+2. Acesse o diretório do projeto de teste:
    ```bash
-   cd calculadora-tdd-netcore
+   cd TestProjCalculadora
 3. Execute os testes unitários usando o comando dotnet test:
    ```bash
    dotnet test
